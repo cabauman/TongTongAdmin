@@ -1,11 +1,11 @@
 ﻿using System;
-using TongTongAdmin.ViewModels;
+using TongTongAdmin.UWP.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 
-namespace TongTongAdmin.Views
+namespace TongTongAdmin.UWP.Views
 {
     public sealed partial class MainPage : Page
     {

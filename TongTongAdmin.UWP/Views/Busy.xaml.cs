@@ -6,7 +6,7 @@ using Template10.Controls;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace TongTongAdmin.Views
+namespace TongTongAdmin.UWP.Views
 {
     public sealed partial class Busy : UserControl
     {

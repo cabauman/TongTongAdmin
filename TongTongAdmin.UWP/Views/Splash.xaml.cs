@@ -3,7 +3,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace TongTongAdmin.Views
+namespace TongTongAdmin.UWP.Views
 {
     public sealed partial class Splash : UserControl
     {

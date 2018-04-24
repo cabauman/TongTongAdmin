@@ -8,7 +8,7 @@ using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
 
-namespace TongTongAdmin.ViewModels
+namespace TongTongAdmin.UWP.ViewModels
 {
     public class DetailPageViewModel : ViewModelBase
     {

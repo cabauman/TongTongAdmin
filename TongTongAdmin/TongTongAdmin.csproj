@@ -10,4 +10,12 @@
     <PackageReference Include="ReactiveUI" Version="8.0.0-alpha0117" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

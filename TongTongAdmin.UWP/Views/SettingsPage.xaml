@@ -1,4 +1,4 @@
-﻿<Page x:Class="TongTongAdmin.Views.SettingsPage"
+﻿<Page x:Class="TongTongAdmin.UWP.Views.SettingsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:Behaviors="using:Template10.Behaviors"
@@ -7,9 +7,9 @@
       xmlns:controls="using:Template10.Controls"
       xmlns:converter="using:Template10.Converters"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="using:TongTongAdmin.Views"
+      xmlns:local="using:TongTongAdmin.UWP.Views"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:TongTongAdmin.ViewModels"
+      xmlns:vm="using:TongTongAdmin.UWP.ViewModels"
       mc:Ignorable="d">
 
     <Page.DataContext>
@@ -101,19 +101,19 @@
                                       RelativePanel.Below="UseShellDrawnBackButtonToggleSwtich" />
 
                         <ToggleSwitch x:Name="ShowHamburgerButtonToggleSwitch"
-                                      Header="TongTongAdmin Button Visibility"
+                                      Header="TongTongAdmin.UWP Button Visibility"
                                       IsEnabled="{Binding IsOn, ElementName=IsFullScreenToggleSwitch, Converter={StaticResource FalseWhenTrueConverter}}"
                                       IsOn="{Binding ShowHamburgerButton, Mode=TwoWay}"
-                                      OffContent="TongTongAdmin Button is hidden"
-                                      OnContent="TongTongAdmin Button is visible"
+                                      OffContent="TongTongAdmin.UWP Button is hidden"
+                                      OnContent="TongTongAdmin.UWP Button is visible"
                                       RelativePanel.AlignLeftWithPanel="True"
                                       RelativePanel.Below="UseLightThemeToggleSwitch" />
 
                         <ToggleSwitch x:Name="IsFullScreenToggleSwitch"
                                       Header="Page content is Full Screen"
                                       IsOn="{Binding IsFullScreen, Mode=TwoWay}"
-                                      OffContent="TongTongAdmin Menu is visible"
-                                      OnContent="TongTongAdmin Menu is hidden"
+                                      OffContent="TongTongAdmin.UWP Menu is visible"
+                                      OnContent="TongTongAdmin.UWP Menu is hidden"
                                       RelativePanel.AlignLeftWithPanel="True"
                                       RelativePanel.Below="ShowHamburgerButtonToggleSwitch" />
 

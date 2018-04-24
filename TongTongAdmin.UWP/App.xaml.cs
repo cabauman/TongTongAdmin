@@ -1,6 +1,6 @@
 ﻿using Windows.UI.Xaml;
 using System.Threading.Tasks;
-using TongTongAdmin.Services.SettingsServices;
+using TongTongAdmin.UWP.Services.SettingsServices;
 using Windows.ApplicationModel.Activation;
 using Template10.Controls;
 using Template10.Common;
@@ -9,7 +9,7 @@ using System.Linq;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Controls;
 
-namespace TongTongAdmin
+namespace TongTongAdmin.UWP
 {
     /// Documentation on APIs used in this page:
     /// https://github.com/Windows-XAML/Template10/wiki

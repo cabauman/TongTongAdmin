@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{EF8265E3-411E-4E72-950E-47012BEA9BA5}</ProjectGuid>
+    <ProjectGuid>{CC523228-C498-40CD-A31A-BC23E1482776}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TongTongAdmin</RootNamespace>
-    <AssemblyName>TongTongAdmin</AssemblyName>
+    <RootNamespace>TongTongAdmin.UWP</RootNamespace>
+    <AssemblyName>TongTongAdmin.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
@@ -175,17 +175,8 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FirebaseAuthentication.net">
-      <Version>3.0.7</Version>
-    </PackageReference>
-    <PackageReference Include="FirebaseDatabase.net">
-      <Version>4.0.0-alpha7</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.8</Version>
-    </PackageReference>
-    <PackageReference Include="ReactiveUI">
-      <Version>8.0.0-alpha0117</Version>
     </PackageReference>
     <PackageReference Include="Template10">
       <Version>1.1.12</Version>
