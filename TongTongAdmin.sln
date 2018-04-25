@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TongTongAdmin.Tests", "Tong
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TongTongAdmin", "TongTongAdmin\TongTongAdmin.csproj", "{545B4DF1-451F-403B-997F-980571732B14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TongTongAdmin.UWP", "TongTongAdmin.UWP\TongTongAdmin.UWP.csproj", "{CC523228-C498-40CD-A31A-BC23E1482776}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,26 +51,6 @@ Global
 		{545B4DF1-451F-403B-997F-980571732B14}.Release|x64.Build.0 = Release|Any CPU
 		{545B4DF1-451F-403B-997F-980571732B14}.Release|x86.ActiveCfg = Release|Any CPU
 		{545B4DF1-451F-403B-997F-980571732B14}.Release|x86.Build.0 = Release|Any CPU
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|ARM.ActiveCfg = Debug|ARM
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|ARM.Build.0 = Debug|ARM
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|ARM.Deploy.0 = Debug|ARM
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|x64.ActiveCfg = Debug|x64
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|x64.Build.0 = Debug|x64
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|x64.Deploy.0 = Debug|x64
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|x86.ActiveCfg = Debug|x86
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|x86.Build.0 = Debug|x86
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Debug|x86.Deploy.0 = Debug|x86
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|Any CPU.ActiveCfg = Release|x86
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|ARM.ActiveCfg = Release|ARM
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|ARM.Build.0 = Release|ARM
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|ARM.Deploy.0 = Release|ARM
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|x64.ActiveCfg = Release|x64
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|x64.Build.0 = Release|x64
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|x64.Deploy.0 = Release|x64
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|x86.ActiveCfg = Release|x86
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|x86.Build.0 = Release|x86
-		{CC523228-C498-40CD-A31A-BC23E1482776}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
