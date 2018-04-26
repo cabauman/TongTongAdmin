@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Converters\**" />
     <Compile Remove="Strings\**" />
+    <EmbeddedResource Remove="Converters\**" />
     <EmbeddedResource Remove="Strings\**" />
+    <None Remove="Converters\**" />
     <None Remove="Strings\**" />
   </ItemGroup>
 
@@ -17,11 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Converters\" />
+    <Folder Include="DataAccess\" />
     <Folder Include="Utils\" />
     <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>
