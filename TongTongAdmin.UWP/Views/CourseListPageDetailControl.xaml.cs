@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace TongTongAdmin.UWP.Views
 {
-    public sealed partial class CoursesPageDetailControl : UserControl
+    public sealed partial class CourseListPageDetailControl : UserControl
     {
         public SampleOrder MasterMenuItem
         {
@@ -15,16 +15,16 @@ namespace TongTongAdmin.UWP.Views
             set { SetValue(MasterMenuItemProperty, value); }
         }
 
-        public static readonly DependencyProperty MasterMenuItemProperty = DependencyProperty.Register("MasterMenuItem", typeof(SampleOrder), typeof(CoursesPageDetailControl), new PropertyMetadata(null, OnMasterMenuItemPropertyChanged));
+        public static readonly DependencyProperty MasterMenuItemProperty = DependencyProperty.Register("MasterMenuItem", typeof(SampleOrder), typeof(CourseListPageDetailControl), new PropertyMetadata(null, OnMasterMenuItemPropertyChanged));
 
-        public CoursesPageDetailControl()
+        public CourseListPageDetailControl()
         {
             InitializeComponent();
         }
 
         private static void OnMasterMenuItemPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var control = d as CoursesPageDetailControl;
+            var control = d as CourseListPageDetailControl;
             control.ForegroundElement.ChangeView(0, 0, 1);
         }
     }

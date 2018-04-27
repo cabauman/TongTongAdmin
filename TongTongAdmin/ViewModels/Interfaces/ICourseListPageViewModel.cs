@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ReactiveUI;
+using System;
 using System.Collections.Generic;
 
 namespace TongTongAdmin.ViewModels.Interfaces
 {
-    public interface ICourseListPageViewModel
+    public interface ICourseListPageViewModel : IRoutableViewModel
     {
     }
 }

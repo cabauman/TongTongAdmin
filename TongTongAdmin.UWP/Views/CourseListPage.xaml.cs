@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Media.Animation;
 
 namespace TongTongAdmin.UWP.Views
 {
-    public sealed partial class CoursesPagePage : Page, INotifyPropertyChanged
+    public sealed partial class CourseListPage : Page, INotifyPropertyChanged
     {
         private SampleOrder _selected;
 
@@ -30,7 +30,7 @@ namespace TongTongAdmin.UWP.Views
 
         public ObservableCollection<SampleOrder> SampleItems { get; private set; } = new ObservableCollection<SampleOrder>();
 
-        public CoursesPagePage()
+        public CourseListPage()
         {
             InitializeComponent();
             Loaded += CoursesPagePage_Loaded;
