@@ -4,7 +4,7 @@ using TongTongAdmin.ViewModels.Interfaces;
 
 namespace TongTongAdmin.ViewModels
 {
-    public class StudentTuitionPerClassListItemViewModel : BaseViewModel, IStudentTuitionPerClassListItemViewModel
+    public class StudentTuitionPerClassListItemViewModel : BaseViewModel //, IStudentTuitionPerClassListItemViewModel
     {
     }
 }

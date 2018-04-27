@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ReactiveUI;
+using System;
 
 using TongTongAdmin.UWP.Services;
-
+using TongTongAdmin.ViewModels;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 
@@ -19,6 +20,9 @@ namespace TongTongAdmin.UWP
         public App()
         {
             InitializeComponent();
+
+            RxApp.SuspensionHost.CreateNewAppState = () => new AppBootstrapper();
+            RxApp.SuspensionHost.SetupDefaultSuspendResume();
 
             // Deferred execution until used. Check https://msdn.microsoft.com/library/dd642331(v=vs.110).aspx for further info on Lazy<T> class.
             _activationService = new Lazy<ActivationService>(CreateActivationService);
@@ -39,7 +43,7 @@ namespace TongTongAdmin.UWP
 
         private ActivationService CreateActivationService()
         {
-            return new ActivationService(this, typeof(Views.CoursesPagePage), new Lazy<UIElement>(CreateShell));
+            return new ActivationService(this, typeof(Views.CourseListPage), new Lazy<UIElement>(CreateShell));
         }
 
         private UIElement CreateShell()
