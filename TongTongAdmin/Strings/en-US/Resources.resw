@@ -117,7 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TongTongAdmin" xml:space="preserve">
-    <value>TongTong Admin</value>
+  <data name="Day_Short_Friday.Content" xml:space="preserve">
+    <value>Fr</value>
+  </data>
+  <data name="Day_Short_Monday.Content" xml:space="preserve">
+    <value>Mo</value>
+  </data>
+  <data name="Day_Short_Saturday.Content" xml:space="preserve">
+    <value>Sa</value>
+  </data>
+  <data name="Day_Short_Sunday.Content" xml:space="preserve">
+    <value>Su</value>
+  </data>
+  <data name="Day_Short_Thursday.Content" xml:space="preserve">
+    <value>Th</value>
+  </data>
+  <data name="Day_Short_Tuesday.Content" xml:space="preserve">
+    <value>Tu</value>
+  </data>
+  <data name="Day_Short_Wednesday.Content" xml:space="preserve">
+    <value>We</value>
+  </data>
+  <data name="NextSemester.Content" xml:space="preserve">
+    <value>Next Semester</value>
+  </data>
+  <data name="ThisSemester.Content" xml:space="preserve">
+    <value>This Semester</value>
   </data>
 </root>

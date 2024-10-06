@@ -1,0 +1,139 @@
+﻿<Page
+    x:Class="TongTongAdmin.Views.CourseHistoryEditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:local="using:TongTongAdmin"
+    xmlns:views="using:TongTongAdmin.Views"
+    xmlns:data="using:TongTongAdmin.Models">
+
+    <Page.Resources>
+        <local:DateStringToFormattedStringConverter x:Key="DateStringToFormattedStringConverter" />
+        <local:DateStringToDateTimeOffsetConverter x:Key="DateStringToDateTimeOffsetConverter"/>
+
+        <DataTemplate x:Key="PastCourseDataTemplate" x:DataType="data:PastCourse">
+            <TextBlock
+                Text="{x:Bind Semester, Converter={StaticResource DateStringToFormattedStringConverter}, ConverterParameter='yyyy년 MM월', Mode=OneWay}"
+                FontWeight="Bold" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="SyllabusItemDataTemplate" x:DataType="data:SyllabusItem">
+            <StackPanel Margin="10">
+                <TextBlock Text="{x:Bind Agenda, TargetNullValue='No agenda.', Mode=OneWay}" Margin="0,0,0,20" />
+                <TextBlock Text="{x:Bind Homework, TargetNullValue='No homework.', Mode=OneWay}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+
+        <views:AlternatingRowListView
+            x:Name="PastCourseListView"
+            Grid.RowSpan="2"
+            OddRowBackground="#6687CEFA"
+            EvenRowBackground="#6620B2AA"
+            BorderThickness="0,0,1,0"
+            Padding="0,0"
+            BorderBrush="{ThemeResource ListBoxBorderThemeBrush}"
+            Background="White"
+            ItemsSource="{x:Bind PastCourses, Mode=OneWay}"
+            IsItemClickEnabled="True"
+            ItemClick="PastCourseListView_ItemClick"
+            ItemTemplate="{StaticResource PastCourseDataTemplate}">
+        </views:AlternatingRowListView>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox
+                Margin="10"
+                HorizontalAlignment="Stretch"
+                Header="Hourly Rate"
+                PlaceholderText="20000"
+                DataContext="{Binding SelectedItem, ElementName=PastCourseListView}"
+                Text="{Binding HourlyRate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                KeyDown="DigitTextBox_KeyDown" />
+            <TextBox
+                Grid.Column="1"
+                Margin="10"
+                HorizontalAlignment="Stretch"
+                Header="Amount Paid"
+                PlaceholderText="100000"
+                DataContext="{Binding SelectedItem, ElementName=PastCourseListView}"
+                Text="{Binding AmountPaid, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                KeyDown="DigitTextBox_KeyDown" />
+        </Grid>
+
+        <views:AlternatingRowListView
+            x:Name="SyllabusItemListView"
+            Grid.Column="1"
+            Grid.Row="1"
+            OddRowBackground="#3F87CEFA"
+            EvenRowBackground="#3F20B2AA"
+            BorderThickness="0,0,1,0"
+            Padding="0,0"
+            Background="White"
+            BorderBrush="{ThemeResource ListBoxBorderThemeBrush}"
+            ItemsSource="{x:Bind SelectedCourse.SyllabusItems, Mode=OneWay}"
+            IsItemClickEnabled="True"
+            ItemClick="SyllabusItemListView_ItemClick"
+            ItemTemplate="{StaticResource SyllabusItemDataTemplate}" />
+
+        <Grid Grid.Column="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <CommandBar>
+                <AppBarButton Icon="Back" Label="Back" ToolTipService.ToolTip="Back" Click="BackButton_Click" />
+                <AppBarButton Icon="Add" Label="Add" ToolTipService.ToolTip="Add Syllabus Item" Click="AddSyllabusItemButton_Click" />
+                <AppBarButton Icon="Delete" Label="Delete" ToolTipService.ToolTip="Delete Syllabus Item" Click="DeleteSyllabusItemButton_Click" />
+                <AppBarButton Name="SaveAppBarButton" Icon="Save" Label="Save" ToolTipService.ToolTip="Save Syllabus Item" Click="SaveCourseButton_Click" />
+            </CommandBar>
+
+            <StackPanel
+                Grid.Row="1"
+                Background="AliceBlue"
+                Padding="20"
+                DataContext="{Binding SelectedItem, ElementName=SyllabusItemListView}">
+                <CalendarDatePicker
+                    Name="ClassDatePicker"
+                    Header="Date"
+                    Date="{Binding FromTime, Mode=TwoWay, Converter={StaticResource DateStringToDateTimeOffsetConverter}}" />
+                <TextBox
+                    Text="{Binding Agenda, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Header="Agenda"
+                    PlaceholderText="Agenda..."
+                    Height="100"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    HorizontalAlignment="Stretch"
+                    Margin="0,20,0,20" />
+                <TextBox
+                    Text="{Binding Homework, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Header="Homework"
+                    PlaceholderText="Homework..."
+                    Height="100"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    HorizontalAlignment="Stretch" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="a97fa734-0902-4431-bc89-ce7e109eb01a" Publisher="CN=Colt Alan Bauman" Version="1.2.3.0" />
+  <mp:PhoneIdentity PhoneProductId="a97fa734-0902-4431-bc89-ce7e109eb01a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>TongTong Admin</DisplayName>
+    <PublisherDisplayName>Colt Alan Bauman</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TongTongAdmin.App">
+      <uap:VisualElements DisplayName="TongTong Admin" Square150x150Logo="Assets\SquareLogo150x150.png" Square44x44Logo="Assets\Logo44x44.png" Description="An app to manage data from the TT Korean School mobile application." BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\WideLogo310x150.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

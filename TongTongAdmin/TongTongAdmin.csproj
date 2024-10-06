@@ -1,27 +1,249 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{3161C797-00D3-41D4-8BFF-E33ADA6F30C7}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TongTongAdmin</RootNamespace>
+    <AssemblyName>TongTongAdmin</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>UwpTutorial_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>CCAAE5A0B62CCF20BB0D3104CB79F01CD6A6FE15</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Strings\**" />
-    <EmbeddedResource Remove="Strings\**" />
-    <None Remove="Strings\**" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\DatabaseAndUidPageParams.cs" />
+    <Compile Include="Common\SelectedDays.cs" />
+    <Compile Include="Helpers\BrushHelper.cs" />
+    <Compile Include="Models\ICourse.cs" />
+    <Compile Include="Services\CourseArchiveExporterService.cs" />
+    <Compile Include="Views\AlternatingRowListView.cs" />
+    <Compile Include="ViewModels\PastCourseViewModel.cs" />
+    <Compile Include="Models\PastCourse.cs" />
+    <Compile Include="Models\VocabSection.cs" />
+    <Compile Include="Models\VocabSet.cs" />
+    <Compile Include="Models\VocabSectionChild.cs" />
+    <Compile Include="ViewModels\CourseViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistrationViewModel.cs" />
+    <Compile Include="ViewModels\Pages\GrammarListPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\SentenceListPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\VocabListPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\StudentListPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\CourseRegistrationListPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\CourseListPageViewModel.cs" />
+    <Compile Include="Views\CourseHistoryEditPage.xaml.cs">
+      <DependentUpon>CourseHistoryEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sample1.cs" />
+    <Compile Include="Views\StudentListPage.xaml.cs">
+      <DependentUpon>StudentListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CourseRegistrationListPage.xaml.cs">
+      <DependentUpon>CourseRegistrationListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CourseListPage.xaml.cs">
+      <DependentUpon>CourseListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\GoogleAuthService.cs" />
+    <Compile Include="Helpers\NotificationHelper.cs" />
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FirebaseAuthService.cs" />
+    <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Models\Syllabus.cs" />
+    <Compile Include="Models\TeacherOption.cs" />
+    <Compile Include="Models\VocabTerm.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\SyllabusItem.cs" />
+    <Compile Include="Models\ScheduleItem.cs" />
+    <Compile Include="Models\CourseRegistration.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Services\FirebaseDatabaseService.cs" />
+    <Compile Include="Services\Interfaces\IFirebaseDatabaseService.cs" />
+    <Compile Include="ValueConverters\BoolToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\DictValuesToCsvConverter.cs" />
+    <Compile Include="ValueConverters\DateStringToFormattedStringConverter.cs" />
+    <Compile Include="ValueConverters\EnumToBoolConverter.cs" />
+    <Compile Include="ValueConverters\DateStringToDateTimeOffsetConverter.cs" />
+    <Compile Include="ValueConverters\DateStringToTimeSpanConverter.cs" />
+    <Compile Include="ValueConverters\BoolInverterConverter.cs" />
+    <Compile Include="ValueConverters\TimeStringToTimeSpanConverter.cs" />
+    <Compile Include="ViewModels\ScheduleItemViewModel.cs" />
+    <Compile Include="ViewModels\SyllabusItemViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="Views\VocabListPage.xaml.cs">
+      <DependentUpon>VocabListPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="FirebaseAuthentication.net" Version="3.0.7" />
-    <PackageReference Include="FirebaseDatabase.net" Version="4.0.0-alpha7" />
-    <PackageReference Include="ReactiveUI" Version="8.0.0-alpha0117" />
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="Assets\ExcelTemplate.xlsx" />
+    <None Include="google-services.json" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\ko-KR\Resources.resw" />
+    <None Include="UwpTutorial_TemporaryKey.pfx" />
   </ItemGroup>
-
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Converters\" />
-    <Folder Include="Utils\" />
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
+    <Content Include="Assets\Logo44x44.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\SquareLogo150x150.scale-200.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\WideLogo310x150.scale-200.png" />
+    <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Views\CourseHistoryEditPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StudentListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\CourseRegistrationListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CourseListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VocabListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml">
+      <Version>2.8.1</Version>
+    </PackageReference>
+    <PackageReference Include="FirebaseAuthentication.net">
+      <Version>3.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="FirebaseDatabase.net">
+      <Version>3.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.3.0" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

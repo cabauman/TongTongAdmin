@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "405695276825",
+    "firebase_url": "https://tt-korean-academy.firebaseio.com",
+    "project_id": "tt-korean-academy",
+    "storage_bucket": "tt-korean-academy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405695276825:android:ce6fbf2822444882",
+        "android_client_info": {
+          "package_name": "com.gamector.ttkoreanacademy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405695276825-tff2i047snrtlhd9e5tc5u9h18074ff0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gamector.ttkoreanacademy",
+            "certificate_hash": "c54f1ab8046b86797f878efccee67dcb75e6cbed"
+          }
+        },
+        {
+          "client_id": "405695276825-8np0k6ginkohoir44mtkfpfgish6h9ur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gamector.ttkoreanacademy",
+            "certificate_hash": "caa4077034f67a5d486a3aff4ba2174dce9febe9"
+          }
+        },
+        {
+          "client_id": "405695276825-4f6mvoirq1r2c9emdleg6rkblf81bvid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcGZSUAF5LDRV_bVPBoa_H1oUZuJfMXgg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405695276825-830gnni8fs8qjtcn4dk6cpl6afg22b9p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gamector.ttkoreanschool"
+              }
+            },
+            {
+              "client_id": "405695276825-4f6mvoirq1r2c9emdleg6rkblf81bvid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

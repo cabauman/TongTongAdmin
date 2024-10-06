@@ -117,7 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TongTongAdmin" xml:space="preserve">
-    <value>통통 관리자</value>
+  <data name="Day_Short_Friday.Content" xml:space="preserve">
+    <value>금</value>
+  </data>
+  <data name="Day_Short_Monday.Content" xml:space="preserve">
+    <value>월</value>
+  </data>
+  <data name="Day_Short_Saturday.Content" xml:space="preserve">
+    <value>토</value>
+  </data>
+  <data name="Day_Short_Sunday.Content" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="Day_Short_Thursday.Content" xml:space="preserve">
+    <value>목</value>
+  </data>
+  <data name="Day_Short_Tuesday.Content" xml:space="preserve">
+    <value>화</value>
+  </data>
+  <data name="Day_Short_Wednesday.Content" xml:space="preserve">
+    <value>수</value>
+  </data>
+  <data name="NextSemester.Content" xml:space="preserve">
+    <value>다음 학기</value>
+  </data>
+  <data name="ThisSemester.Content" xml:space="preserve">
+    <value>이번 학기</value>
   </data>
 </root>
