@@ -5,6 +5,7 @@ using ReactiveUI;
 using Splat;
 using TongTongAdmin.ViewModels;
 using TongTongAdmin.UWP.Views;
+using TongTongAdmin.ViewModels.Interfaces;
 
 namespace TongTongAdmin.UWP
 {
@@ -30,8 +31,6 @@ namespace TongTongAdmin.UWP
 
     public class AppBootstrapper : ReactiveObject, IScreen
     {
-        public RoutingState Router { get; private set; }
-
         public AppBootstrapper(IMutableDependencyResolver dependencyResolver = null, RoutingState testRouter = null)
         {
             Router = testRouter ?? new RoutingState();
@@ -48,11 +47,14 @@ namespace TongTongAdmin.UWP
             Router.Navigate.Execute(new WelcomeViewModel(this));
         }
 
+        public RoutingState Router { get; }
+
         private void RegisterParts(IMutableDependencyResolver dependencyResolver)
         {
             dependencyResolver.RegisterConstant(this, typeof(IScreen));
 
-            dependencyResolver.Register(() => new WelcomeView(), typeof(IViewFor<CourseListPageViewModel>));
+            dependencyResolver.Register(() => new WelcomeView(), typeof(IViewFor<IWelcomeViewModel>));
+            dependencyResolver.Register(() => new CourseListPage(), typeof(IViewFor<ICourseListPageViewModel>));
         }
     }
 }

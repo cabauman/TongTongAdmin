@@ -39,6 +39,18 @@ namespace TongTongAdmin.UWP.Helpers
             return await Json.ToObjectAsync<T>(fileContent);
         }
 
+        public static async Task DeleteAsync(this StorageFolder folder, string name)
+        {
+            if(!File.Exists(Path.Combine(folder.Path, GetFileName(name))))
+            {
+                return;
+            }
+
+            var file = await folder.GetFileAsync($"{name}.json");
+
+            await file.DeleteAsync();
+        }
+
         public static async Task SaveAsync<T>(this ApplicationDataContainer settings, string key, T value)
         {
             settings.SaveString(key, await Json.StringifyAsync(value));
